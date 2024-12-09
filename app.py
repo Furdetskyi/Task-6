@@ -158,4 +158,6 @@ def delete_product(product_id):
 
 # Запуск додатку
 if __name__ == "__main__":
-    app.run(debug=True)
+    import os
+    port = int(os.environ.get("PORT", 5000))  # Встановлюємо порт зі змінної середовища або стандартний
+    app.run(host="0.0.0.0", port=port)
