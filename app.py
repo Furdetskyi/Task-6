@@ -11,7 +11,6 @@ from flask_jwt_extended import JWTManager, jwt_required, create_access_token, ge
 app = Flask(__name__)
 
 # Конфігурація для SQLAlchemy та JWT
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+pg8000://root:Valikf2005@34.79.21.6:5432/test'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["JWT_SECRET_KEY"] = "12345"
 app.config["JWT_ACCESS_TOKEN_EXPIRES"] = 3600  # Термін дії токену (секунди)
