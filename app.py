@@ -25,6 +25,11 @@ def save_data(file, data):
     with open(file, 'w') as f:
         json.dump(data, f, indent=4)
 
+# Додано кореневий маршрут
+@app.route('/')
+def home():
+    return "Welcome to the API!"
+
 # Маршрути для користувачів
 @app.route('/login', methods=['POST'])
 def login():
